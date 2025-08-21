@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -37,10 +38,15 @@ class MainActivity : AppCompatActivity() {
                  * creo una variable, llamo al metodo putExtra(nombre_put, valor_variable)
                  *
                  */
-                nuevaVentana.putExtra("sesion", edUsername.text.toString())
+
+                var ses_username = edUsername.text.toString()
+
+                nuevaVentana.putExtra("sesion",ses_username )
                 nuevaVentana.putExtra("par_contrasena", edPasswd.text.toString() )                //abrimos el activity
                 startActivity(nuevaVentana)
 
+                val toast = Toast.makeText(this, "Bienvenid@s: "+ses_username, Toast.LENGTH_SHORT) // in Activity
+                toast.show()
                 txMensaje.text = "login OK"
 
 

@@ -16,6 +16,8 @@ class MainActivity2 : AppCompatActivity() {
 
 
 
+
+
         //ACTIVITY DESTINO
         val msjeBienvenida:TextView = findViewById(R.id.tx_bienvenido)
         //creo variable asigno valor recibido desde otro activity

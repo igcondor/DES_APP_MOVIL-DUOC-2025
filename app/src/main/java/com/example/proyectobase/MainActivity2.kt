@@ -2,6 +2,7 @@ package com.example.proyectobase
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -24,6 +25,15 @@ class MainActivity2 : AppCompatActivity() {
         msjeBienvenida.text = usuarioDesdeOtroActivity.toString()
 
         val recibeContrasena = intent.getStringExtra("par_contrasena")
+
+        // PARA IR A CALCULADORA
+        val btnCalculadora: Button = findViewById(R.id.btn_calculadora)
+
+        btnCalculadora.setOnClickListener{
+            val nuevoActivity =Intent(this, NuevoActivity::class.java)
+            startActivity(nuevoActivity)
+        }
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())

@@ -19,35 +19,47 @@ class NuevoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_nuevo)
-        val number1:EditText = findViewById(R.id.edNumber1)
-        val number2:EditText = findViewById(R.id.edNumber2)
-        val txtResultado:TextView = findViewById(R.id.txtResultado)
-        val btnCalcular:Button = findViewById(R.id.btnCalcular)
+        val number1: EditText = findViewById(R.id.edNumber1)
+        val number2: EditText = findViewById(R.id.edNumber2)
+        val txtResultado: TextView = findViewById(R.id.txtResultado)
+        val btnCalcular: Button = findViewById(R.id.btnCalcular)
         val spOperaciones: Spinner = findViewById(R.id.sp_operacion)
 
         //crearemos nuestro primer array en base del spinner
-        val menuSPOperaciones = listOf("Sumar","Restar","Multiplicar","Dividir")
+        val menuSPOperaciones = listOf("Sumar", "Restar", "Multiplicar", "Dividir")
 
         //vamos a completar el spinner operaciones
-        val adapter = ArrayAdapter( this,android.R.layout.simple_list_item_1,
-            menuSPOperaciones)
+        val adapter = ArrayAdapter(
+            this, android.R.layout.simple_list_item_1,
+            menuSPOperaciones
+        )
 
         spOperaciones.adapter = adapter
 
         btnCalcular.setOnClickListener {
-            var valor1:Int = number1.text.toString().toIntOrNull() ?:0
-            var valor2:Int = number2.text.toString().toIntOrNull() ?:0
+            var valor1: Int = number1.text.toString().toIntOrNull() ?: 0
+            var valor2: Int = number2.text.toString().toIntOrNull() ?: 0
 
-            var resultadoOP: Int = OPMatematicas.sumar(valor1,valor2)
-            txtResultado.text = resultadoOP.toString()
+            if (spOperaciones.selectedItem == "Sumar") {
+                var resultadoOP: Int = OPMatematicas.sumar(valor1, valor2)
+                txtResultado.text = resultadoOP.toString()
+            } else if (spOperaciones.selectedItem == "Restar") {
+                var resultadoOP: Int = OPMatematicas.restar(valor1, valor2)
+                txtResultado.text = resultadoOP.toString()
+            } else if (spOperaciones.selectedItem == "Multiplicar") {
+                var resultadoOP: Int = OPMatematicas.multiplicar(valor1, valor2)
+                txtResultado.text = resultadoOP.toString()
+            } else {
+                var resultadoOP: Int = OPMatematicas.dividir(valor1, valor2)
+                txtResultado.text = resultadoOP.toString()
+            }
+
+
+
+            ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+                val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+                v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+                insets
+            }
         }
-
-
-
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
-    }
-}
+    }}

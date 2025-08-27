@@ -1,8 +1,10 @@
 package com.example.proyectobase
 
 import android.os.Bundle
+import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Spinner
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -21,6 +23,16 @@ class NuevoActivity : AppCompatActivity() {
         val number2:EditText = findViewById(R.id.edNumber2)
         val txtResultado:TextView = findViewById(R.id.txtResultado)
         val btnCalcular:Button = findViewById(R.id.btnCalcular)
+        val spOperaciones: Spinner = findViewById(R.id.sp_operacion)
+
+        //crearemos nuestro primer array en base del spinner
+        val menuSPOperaciones = listOf("Sumar","Restar","Multiplicar","Dividir")
+
+        //vamos a completar el spinner operaciones
+        val adapter = ArrayAdapter( this,android.R.layout.simple_list_item_1,
+            menuSPOperaciones)
+
+        spOperaciones.adapter = adapter
 
         btnCalcular.setOnClickListener {
             var valor1:Int = number1.text.toString().toIntOrNull() ?:0

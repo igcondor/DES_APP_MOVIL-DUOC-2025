@@ -17,13 +17,6 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-
-
-
-
-
-
-
         //inicializamos variables de elementos layout
         val edUsername:EditText = findViewById(R.id.ed_username)
         val edPasswd:EditText = findViewById(R.id.ed_password)
@@ -55,16 +48,10 @@ class MainActivity : AppCompatActivity() {
                 val toast = Toast.makeText(this, "Bienvenid@s: "+ses_username, Toast.LENGTH_SHORT) // in Activity
                 toast.show()
                 txMensaje.text = "login OK"
-
-
             }else{
                 txMensaje.text = "login NO"
             }
-
         }
-
-
-
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)

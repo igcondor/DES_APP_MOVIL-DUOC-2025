@@ -11,7 +11,6 @@ import androidx.core.view.WindowInsetsCompat
 
 import com.example.proyectobase.usdpesos.Conversor
 
-
 class MainActivity5 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,13 +23,9 @@ class MainActivity5 : AppCompatActivity() {
 
         btnAccion.setOnClickListener {
             var montoPesosInt:Int = edMontoPesos.text.toString().toIntOrNull() ?: 0
-
             txResultado.text = "RESULTADO: " + Conversor.convertir_usd_string(montoPesosInt)
 
         }
-
-
-
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())

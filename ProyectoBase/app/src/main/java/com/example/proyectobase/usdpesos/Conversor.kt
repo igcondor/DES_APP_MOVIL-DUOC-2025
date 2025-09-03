@@ -14,9 +14,17 @@ object Conversor {
     }
 
     fun convertir_usd_string(valorPesos: Int): String {
-        var tipoCambio:Double = 900.0
-        var resultado:Double = valorPesos / tipoCambio
-        return resultado.toString()
+
+        try {
+            var tipoCambio: Double = 900.0
+            var resultado: Double = valorPesos / tipoCambio
+            return resultado.toString()
+
+        }catch (e: ArithmeticException){
+            return "0"
+        }finally {
+            println("error: division en cero")
+        }
     }
 
     fun convertir_usd_int(valorPesos: Int): Int {

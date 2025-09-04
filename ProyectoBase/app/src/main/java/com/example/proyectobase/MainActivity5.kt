@@ -10,6 +10,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 import com.example.proyectobase.usdpesos.Conversor
+import com.example.proyectobase.funciones.OpMatematicas
+
 
 class MainActivity5 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,7 +25,14 @@ class MainActivity5 : AppCompatActivity() {
 
         btnAccion.setOnClickListener {
             var montoPesosInt:Int = edMontoPesos.text.toString().toIntOrNull() ?: 0
-            txResultado.text = "RESULTADO: " + Conversor.convertir_usd_string(montoPesosInt)
+
+            txResultado.text = OpMatematicas.dividir(montoPesosInt, 0).toString()
+
+            if(txResultado.text == "101111"){
+                edMontoPesos.text = null
+            }
+
+            //txResultado.text = "RESULTADO: " + Conversor.convertir_usd_string(montoPesosInt)
 
         }
 

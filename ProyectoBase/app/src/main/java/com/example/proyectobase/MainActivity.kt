@@ -24,8 +24,8 @@ class MainActivity : AppCompatActivity() {
         val txMensaje:TextView = findViewById(R.id.tx_mensaje)
 
         // variables para comparar password
-        var usuarioBase = "ch.munozs"
-        var passwBase = "admin123"
+        var usuarioBase = "admin"
+        var passwBase = "admin"
 
         btnLogin.setOnClickListener {
 
@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
                 && edPasswd.text.toString() == passwBase){
 
                 // creo un objeto intent
-                val nuevaVentana = Intent(this, MainActivity2::class.java)
+                val nuevaVentana = Intent(this, MainActivity6::class.java)
                 /**
                  * creo una variable, llamo al metodo putExtra(nombre_put, valor_variable)
                  *

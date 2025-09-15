@@ -14,11 +14,11 @@ import androidx.core.view.WindowInsetsCompat
 //IMPORT PACKAGE CUSTOM UTILS PARA CALCULAR
 import com.example.proyectobase.utils.OPMatematicas
 
-class NuevoActivity : AppCompatActivity() {
+class Calculadora_ActivityV2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_nuevo)
+        setContentView(R.layout.activity_calculadorav2)
         val number1: EditText = findViewById(R.id.edNumber1)
         val number2: EditText = findViewById(R.id.edNumber2)
         val txtResultado: TextView = findViewById(R.id.txtResultado)

@@ -30,8 +30,8 @@ class MainActivity2 : AppCompatActivity() {
         val btnCalculadora: Button = findViewById(R.id.btn_calculadora)
 
         btnCalculadora.setOnClickListener{
-            val nuevoActivity =Intent(this, NuevoActivity::class.java)
-            startActivity(nuevoActivity)
+            val calculadoraActivityV2 =Intent(this, Calculadora_ActivityV2::class.java)
+            startActivity(calculadoraActivityV2)
         }
 
 

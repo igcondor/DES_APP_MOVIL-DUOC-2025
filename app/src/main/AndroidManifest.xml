@@ -13,10 +13,13 @@
         android:theme="@style/Theme.ProyectoBase"
         tools:targetApi="31">
         <activity
+            android:name=".Menu_Opciones"
+            android:exported="false" />
+        <activity
             android:name=".List_View_Activity"
             android:exported="false" />
         <activity
-            android:name=".NuevoActivity"
+            android:name=".Calculadora_ActivityV2"
             android:exported="false" />
         <activity
             android:name=".MainActivity3"

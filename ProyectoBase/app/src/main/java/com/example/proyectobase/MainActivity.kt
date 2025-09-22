@@ -10,12 +10,24 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.proyectobase.funciones.ValidarConexionWAN
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+
+        //funcion heredada para verificar conexion a internet
+        if(ValidarConexionWAN.isOnline(this)){
+            println("conectado")
+        }else{
+            println("sin conexion")
+            val toast = Toast.makeText(
+                this
+                , "SIN CONEXION"
+                , Toast.LENGTH_SHORT).show()
+        }
 
         //inicializamos variables de elementos layout
         val edUsername:EditText = findViewById(R.id.ed_username)
@@ -33,12 +45,7 @@ class MainActivity : AppCompatActivity() {
                 && edPasswd.text.toString() == passwBase){
 
                 // creo un objeto intent
-                val nuevaVentana = Intent(this, MainActivity6::class.java)
-                /**
-                 * creo una variable, llamo al metodo putExtra(nombre_put, valor_variable)
-                 *
-                 */
-
+                val nuevaVentana = Intent(this, MainActivity2::class.java)
                 var ses_username = edUsername.text.toString()
 
                 nuevaVentana.putExtra("sesion",ses_username )

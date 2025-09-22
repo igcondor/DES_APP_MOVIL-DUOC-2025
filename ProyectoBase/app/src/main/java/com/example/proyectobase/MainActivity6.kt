@@ -17,6 +17,7 @@ class MainActivity6 : AppCompatActivity() {
 
 
         val opcionesLV: ListView = findViewById(R.id.lv_menu_principal)
+
         val opcionesArr = arrayOf(
             "Sumar"
             , "Restar"

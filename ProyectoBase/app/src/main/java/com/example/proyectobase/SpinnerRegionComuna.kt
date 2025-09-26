@@ -22,6 +22,7 @@ class SpinnerRegionComuna : AppCompatActivity() {
        // CargarAlumnosAPI.cargarAlumnos(this, listaAlumnos)
 
         CargarRegionComunaAPI.cargarRegionComuna(this, spRegion)
+        CargarRegionComunaAPI.cargarRegionComuna2(this, spComuna)
 
 
 

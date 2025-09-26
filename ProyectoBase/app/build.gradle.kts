@@ -46,6 +46,8 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+
+
     // Núcleo de Retrofit: cliente HTTP para consumir APIs REST con interfaces anotadas (@GET, @POST, etc.)
     implementation("com.squareup.retrofit2:retrofit:2.11.0")
     // Convertidor JSON <-> data classes usando Moshi dentro de Retrofit (MoshiConverterFactory)

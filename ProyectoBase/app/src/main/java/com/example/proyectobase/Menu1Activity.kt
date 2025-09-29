@@ -14,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.proyectobase.funciones.ValidarConexionWAN
 
 
-class MainActivity2 : AppCompatActivity() {
+class Menu1Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -63,7 +63,7 @@ class MainActivity2 : AppCompatActivity() {
             val lsMenuOpcionSeleccionada = parent.getItemAtPosition(position).toString()
 
             if(lsMenuOpcionSeleccionada.equals("CALCULADORA")){
-                val abrirCalculadora = Intent(this, MainActivity4::class.java)
+                val abrirCalculadora = Intent(this, CalculadoraActivity::class.java)
                 startActivity(abrirCalculadora)
             }else if (lsMenuOpcionSeleccionada.equals("GUARDAR API")){
 

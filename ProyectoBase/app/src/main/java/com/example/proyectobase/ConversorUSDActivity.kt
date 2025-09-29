@@ -9,11 +9,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-import com.example.proyectobase.usdpesos.Conversor
 import com.example.proyectobase.funciones.OpMatematicas
 
 
-class MainActivity5 : AppCompatActivity() {
+class ConversorUSDActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()

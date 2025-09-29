@@ -32,19 +32,19 @@
             android:name=".MainActivity6"
             android:exported="false" />
         <activity
-            android:name=".MainActivity5"
+            android:name=".ConversorUSDActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity4"
+            android:name=".CalculadoraActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity3"
             android:exported="false" />
         <activity
-            android:name=".MainActivity2"
+            android:name=".Menu1Activity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

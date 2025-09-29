@@ -14,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat
 //importo el package creado
 import com.example.proyectobase.funciones.OpMatematicas
 
-class MainActivity4 : AppCompatActivity() {
+class CalculadoraActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()

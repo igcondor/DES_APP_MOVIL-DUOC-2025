@@ -45,7 +45,7 @@ class LoginActivity : AppCompatActivity() {
                 && edPasswd.text.toString() == passwBase){
 
                 // creo un objeto intent
-                val nuevaVentana = Intent(this, SpinnerRegionComuna::class.java)
+                val nuevaVentana = Intent(this, Menu1Activity::class.java)
                 var ses_username = edUsername.text.toString()
 
                 nuevaVentana.putExtra("sesion",ses_username )

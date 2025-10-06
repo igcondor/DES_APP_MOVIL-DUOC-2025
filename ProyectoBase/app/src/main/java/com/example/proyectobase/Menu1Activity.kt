@@ -47,7 +47,8 @@ class Menu1Activity : AppCompatActivity() {
         val lsMenu: ListView = findViewById(R.id.ls_menu_principal)
 
         val arrMenuPrincipal = arrayOf(
-            "CALCULADORA"
+            "CALCULADORA",
+            "CAMARA_STUFF"
             , "LEER API"
             , "GUARDAR API"
             , "GUARDAR SQL LITE"
@@ -65,7 +66,13 @@ class Menu1Activity : AppCompatActivity() {
             if(lsMenuOpcionSeleccionada.equals("CALCULADORA")){
                 val abrirCalculadora = Intent(this, CalculadoraActivity::class.java)
                 startActivity(abrirCalculadora)
-            }else if (lsMenuOpcionSeleccionada.equals("GUARDAR API")){
+            }else if (lsMenuOpcionSeleccionada.equals("CAMARA_STUFF")){
+                val abrirCamara = Intent(this, CamaraActivity::class.java)
+                startActivity(abrirCamara)
+                Toast.makeText(this, "CAMARA SELECCIONADA", Toast.LENGTH_SHORT).show()}
+
+
+            else if (lsMenuOpcionSeleccionada.equals("GUARDAR API")){
 
                 Toast.makeText(this, "NINGUNA OPCION SELECCIONADA", Toast.LENGTH_SHORT).show()
 

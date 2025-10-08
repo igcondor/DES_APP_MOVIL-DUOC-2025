@@ -7,9 +7,11 @@ import okhttp3.logging.HttpLoggingInterceptor
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 
+//
 object ApiDuocClient {
     private const val BASE_URL = "https://uxdynamic.cl/"
 
+    //AUTENTICACIÓN HTTP HACIA  AL ENDPOINT de base_url
     private val logging = HttpLoggingInterceptor().apply {
         level = HttpLoggingInterceptor.Level.BODY
     }
@@ -22,6 +24,7 @@ object ApiDuocClient {
         .add(KotlinJsonAdapterFactory())
         .build()
 
+    // ESTO ES LO QUE EJECUTA TODO LO ANTERIOR??
     val service: ApiDuocService by lazy {
         Retrofit.Builder()
             .baseUrl(BASE_URL)

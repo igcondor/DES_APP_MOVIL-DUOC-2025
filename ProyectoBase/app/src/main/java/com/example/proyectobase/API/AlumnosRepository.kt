@@ -5,9 +5,11 @@ import kotlinx.coroutines.withContext
 
 /**
  * Objeto que conecta la aplicacion con el webservices
- * usa corutinas para que las llamadas se ejecuten en segundo plano asi
+ * usa corrutinas para que las llamadas se ejecuten en segundo plano asi
  * no bloquea el hilo principal
  */
+
+//ESTE ARCHIVO SOLO INSTANCIA PARA QUE SE EJECUTEN EN SEGUNDO PLANO
 object AlumnosRepository {
 
     suspend fun fetchAlumnos(): Result<List<Alumno>> = withContext(Dispatchers.IO) {
